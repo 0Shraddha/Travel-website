@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+<style>
+  .ser-vice{
+    height: 250px;
+    margin :auto;
+    overflow: hidden;
+    position: relative;
+  }
+  .service{
+    /* background-color: #333; */
+    animation: scrolling 10s linear infinite;
+    width: calc(190px*10);
+  
+    gap: 10px;
+  }
+  .service-col{
+   width: 80px;
+   height: 240px;
+   margin-top: 20px;
+  
+    
+  }
+
+  @keyframes scrolling{
+    0%{transform: translateX(0);}
+    100%{transform: translateX(calc(-60vw));}
+  }
+</style>
+
+  </head>
+  <body>
+    <!-- left attacted navbar -->
+    <div class="destination">
+      <div class="side-nav">
+        <nav>
+          <!-- <div class="logo1">
+              <a href="index.html" class="logo1">TRAVEL</a>
+            </div> -->
+          <ul>
+            <li>
+              <a href="index.html">
+                <i class="fa fa-home"></i>
+                <span class="nav-item">Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="destination.html">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <span class="nav-item">Destination</span>
+              </a>
+            </li>
+            <li>
+              <a href="service.html">
+                <i class="fa-brands fa-sitrox"></i>
+                <span class="nav-item">Services</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-blog"></i>
+                <span class="nav-item">Blogs</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-circle-question"></i>
+                <span class="nav-item">Help</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="navbar">
+      <h1 class="logo"><span>T</span>RAVEL</h1>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <ul class="nav">
+        <li><a href="index.html" class="home">Home</a></li>
+        <li><a href="destination.html" class="destination">Destination</a></li>
+        <li class="active"><a href="#" class="servicee">Service</a></li>
+        <li><a href="#" class="explore">Explore</a></li>
+        <li><a href="#" class="about">About</a></li>
+      </ul>
+
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span><i class="fa fa-bars"></i></span>
+
+      </label>
+    </div>
+
+    <!-- services section -->
+    <section class="services" id="services">
+      <div class="heading">
+        <span>Our services</span>
+        <h1>Travel with no regrets</h1>
+      </div>
+      <div class="ser-vice">
+      <div class="service">
+        <div class="service-col">
+          <div class="icons"><i class="fa fa-building"></i></div>
+         <a href="">Affordable Hotels</a>
+         <p>Lorem ipsum dolor amet amet consectetur adipisicing elit. Voluptas, alias?</p>      
+      </div>
+         <div class="service-col">
+          <div class="icons"><i class="fa fa-utensils"></i></div>
+          <a href="">Food and Drinks</a>
+          <p>Lorem ipsum dolor amet amet consectetur adipisicing elit. Voluptas, alias?</p>
+        </div>
+         <div class="service-col">
+          <div class="icons"><i class="fas fa-person-hiking"></i></div>
+         <a href="">Adventure</a>
+         <p>Lorem ipsum dolor amet amet consectetur adipisicing elit. Voluptas, alias?</p>
+         </div>
+         <div class="service-col">
+          <div class="icons"><i class="fa fa-utensils"></i></div>
+          <a href="">Food and Drinks</a>
+          <p>Lorem ipsum dolor amet amet consectetur adipisicing elit. Voluptas, alias?</p>
+        </div>
+        
+         <div class="service-col">
+          <div class="icons"><i class="fa fa-shield"></i></div>
+         <a href="">Security</a>
+         <p>Lorem ipsum dolor amet amet consectetur adipisicing elit. Voluptas, alias?</p>
+          </div>
+          <div class="service-col">
+            <div class="icons"><i class="fa fa-utensils"></i></div>
+            <a href="">Food and Drinks</a>
+            <p>Lorem ipsum dolor amet amet consectetur adipisicing elit. Voluptas, alias?</p>
+          </div>
+           <div class="service-col">
+            <div class="icons"><i class="fas fa-person-hiking"></i></div>
+           <a href="">Adventure</a>
+           <p>Lorem ipsum dolor amet amet consectetur adipisicing elit. Voluptas, alias?</p>
+           </div>
+        </div>
+          
+          </div>
+      </section>
+    <!-- chart -->
+    <section class="showcase">
+      <div class="graphBox">
+
+        <video src="./image/video2.mp4" muted loop autoplay></video>
+
+        <div class="box1" id="box1">
+          <canvas id="myChart"></canvas>
+        </div>
+        <div class="box2" id="box2">
+          <canvas id="hotels"></canvas>
+  </div>
+    </section>
+
+    <footer>
+      <div class="social">
+        <a href="#"><i class="fa-brands fa-linkedin"></i></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></i></a>
+      </div>
+      <p>Travel Buddy, Copyright &copy; 2022</p>
+  
+  </footer>
+  
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script src="chart.js"></script>
+<script>
+  function showBox1(){
+    setTimeout(() =>{
+    let elem2= document.getElementById('box2');
+    let elem1= document.getElementById('box1')
+    elem1.style.display='block'
+elem2.style.display='none'
+showBox2()
+},[4000])
+  }
+
+  function showBox2(){
+    setTimeout(() =>{
+      let elem2= document.getElementById('box2');
+    let elem1= document.getElementById('box1')
+    elem1.style.display='none'
+elem2.style.display='block'
+showBox1()
+},[4000])
+  }
+
+showBox1();
+</script>
+
+
+
+  </body>
+</html>
